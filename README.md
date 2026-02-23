@@ -2,11 +2,11 @@
 
 What factors significantly influence fruit pricing across regions and seasons?
 
-This project builds a multiple linear regression model using Google BigQuery ML to identify the key drivers of fruit price variation across U.S. regions, seasons, fruit types, and ripeness levels. The full data pipeline — from ingestion and quality checks through transformation, feature engineering, and model training — is implemented entirely in BigQuery using SQL, with model evaluation and visualizations produced in Python.
+This project builds a multiple linear regression model using Google BigQuery ML to identify the key drivers of fruit price variation across U.S. regions, seasons, fruit types, and ripeness levels. The full data pipeline, from ingestion and quality checks through transformation, feature engineering, and model training, is implemented entirely in BigQuery using SQL, with model evaluation and visualizations produced in Python.
 
 ## Key Findings
 
-The model achieved **R² = 0.9487** on the validation set, explaining ~95% of the variation in price per pound — a strong result indicating that fruit type, region, ripeness, and season together provide a near-complete picture of price drivers.
+The model achieved **R² = 0.9487** on the validation set, explaining ~95% of the variation in price per pound, a strong result indicating that fruit type, region, ripeness, and season together provide a near-complete picture of price drivers.
 
 The null hypothesis (that these variables have no significant effect on price) was **rejected**. All major predictors except weight were statistically significant at α = 0.05.
 
@@ -67,7 +67,7 @@ All data preparation and modeling steps were implemented in BigQuery using SQL:
 
 **Step 1 — Ingestion:** Dataset loaded into BigQuery with auto-detected schema using a BigQuery load job.
 
-**Step 2 — Quality Checks:** SQL-based NULL checks across all key variables confirmed 0 missing values. IQR-based outlier detection on `weight_lb` found 0 outliers — no imputation required.
+**Step 2 — Quality Checks:** SQL-based NULL checks across all key variables confirmed 0 missing values. IQR-based outlier detection on `weight_lb` found 0 outliers, no imputation required.
 
 **Step 3 — Cleaning & Transformation:** Categorical fields were standardized (trimmed, proper-cased). Month was parsed as a date and converted to a numeric month value (1–12), which was then mapped to a derived `season` variable (Winter: 12/1/2, Spring: 3/4/5, Summer: 6/7/8, Fall: 9/10/11).
 
