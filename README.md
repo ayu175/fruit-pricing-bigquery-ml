@@ -2,7 +2,7 @@
 
 What factors significantly influence fruit pricing across regions and seasons?
 
-This project builds a multiple linear regression model using Google BigQuery ML to identify the key drivers of fruit price variation across U.S. regions, seasons, fruit types, and ripeness levels. The full data pipeline, from ingestion and quality checks through transformation, feature engineering, and model training, is implemented entirely in BigQuery using SQL, with model evaluation and visualizations produced in Python.
+This project builds a multiple linear regression model using Google BigQuery ML to identify the key drivers of fruit price variation across U.S. regions, seasons, fruit types, and ripeness levels. The full data pipeline, from ingestion and quality checks through transformation, feature engineering, and model training, and model evaluation is implemented entirely in BigQuery using SQL, with visualizations produced in Python.
 
 ## Key Findings
 
